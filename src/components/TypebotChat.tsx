@@ -255,6 +255,12 @@ export const TypebotChat: React.FC<TypebotChatProps> = ({
       whatsappClicked: true,
     });
 
+    // Track Meta Pixel Contact event
+    if (typeof window !== 'undefined' && (window as any).fbq) {
+      (window as any).fbq('track', 'Contact');
+      (window as any).fbq('track', 'Lead');
+    }
+
     // Build URL and open
     const url = buildWhatsAppUrl(
       config.whatsappNumber,
@@ -308,8 +314,8 @@ export const TypebotChat: React.FC<TypebotChatProps> = ({
               >
                 {/* Bot Name Label */}
                 {msg.sender === 'bot' && (
-                  <div className="text-[10px] font-semibold text-stone-400 mb-1 tracking-tight">
-                    {config.brandName}
+                  <div className="text-[10px] font-semibold text-stone-400 mb-1 tracking-tight notranslate" translate="no">
+                    F.A STORE
                   </div>
                 )}
 
@@ -335,7 +341,7 @@ export const TypebotChat: React.FC<TypebotChatProps> = ({
                     <div className="mt-2">
                       <span className="inline-flex items-center gap-1 px-2.5 py-0.5 bg-stone-100 text-stone-800 text-[10px] font-semibold rounded-full border border-stone-200/80">
                         <Sparkles className="w-3 h-3 text-stone-800 shrink-0" />
-                        F.A STORE — Estilo em cada detalhe
+                        <span className="notranslate" translate="no">F.A STORE</span> — Estilo em cada detalhe
                       </span>
                     </div>
                   </motion.div>

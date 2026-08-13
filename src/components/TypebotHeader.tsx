@@ -56,8 +56,8 @@ export const TypebotHeader: React.FC<TypebotHeaderProps> = ({
 
           <div>
             <div className="flex items-center space-x-2">
-              <h1 className="text-sm font-bold text-stone-900 tracking-wider">
-                {config.brandName && config.brandName !== 'Relógio Digital' ? config.brandName : 'F.A STORE'}
+              <h1 className="text-sm font-bold text-stone-900 tracking-wider notranslate" translate="no">
+                F.A STORE
               </h1>
             </div>
             <p className="text-[11px] font-medium text-emerald-600 flex items-center gap-1">
