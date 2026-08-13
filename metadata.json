@@ -1,0 +1,6 @@
+{
+  "name": "F.A STORE - Relógio Digital Typebot",
+  "description": "Experiência conversacional e qualificadora da F.A STORE para atendimento de relógio digital via WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
